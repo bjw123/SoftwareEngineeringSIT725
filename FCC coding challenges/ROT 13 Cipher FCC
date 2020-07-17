@@ -1,0 +1,32 @@
+function rot13(str) { // LBH QVQ VG!
+  var StrArr;
+  var ResultArr = [];
+  StrArr = str.split('')
+      for (let i =0; i<StrArr.length; i++)
+      {
+          let ASCII = StrArr[i].charCodeAt(0);
+    
+          
+          
+          if (ASCII < 78 && ASCII > 64)
+          {
+             ASCII += 13; 
+          }
+          else if (ASCII >= 78 && ASCII < 91)
+          {
+              ASCII -= 13;
+                  
+          }
+          var NewLetter;
+          NewLetter = String.fromCharCode(ASCII);
+          ResultArr.push(NewLetter);
+
+          
+      }
+      str = ResultArr.join("");
+      return str;
+}
+
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");

@@ -1,0 +1,25 @@
+function palindrome(str) {
+  // Good luck!
+  let original = "";
+  let reverse = "";
+  let strSplit =[];
+  for (let i =0; i<str.length; i++)
+  {
+    original = str.toLowerCase().replace(/[\W\s_]/gi,"");
+    strSplit = original.split("");
+    strSplit = strSplit.reverse();
+    reverse = strSplit.join("")
+    reverse.toLowerCase();
+
+  }
+ if(original == reverse)
+  {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+palindrome("eye");
